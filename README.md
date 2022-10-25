@@ -1,2 +1,10 @@
-# about-me-201d92
-About me: First project for 201d92
+# About Me Project
+
+## Author: Coriana Williams 
+
+## Lab02
+- Did basic set up for About Me Project
+
+## Lab03
+
+## Lab04
