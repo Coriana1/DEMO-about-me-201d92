@@ -1,13 +1,18 @@
 body {
   background-color: maroon;
+  margin: 2;
+  padding: 2;
+  font-family:'Times New Roman', Times, serif;
 }
 
 h1 {
-  font-size: 7vw;
+  font-size: 8vw;
   color: blanchedalmond;
-  box-shadow: 3pt;
+  float: center;
+  text-shadow: 10px 10px 10px red;
 }
 
 p {
   color: blanchedalmond;
+  background-color: transparent;
 }
