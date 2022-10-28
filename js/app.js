@@ -49,6 +49,8 @@ if(questionFive === 'YES' || questionFive === 'Y') {
   // console.log(`${guessName}! Incorrect! Give it one last try please.`);
   alert(`${guessName}! Incorrect! Give it one last try please.`);
 }
+
+
 let favColor = ['black', 'red', 'yellow', 'blue'];
 let guessesLeft = 6;
 let correctAnswer = false;
@@ -64,14 +66,16 @@ while(guessesLeft > 0) {
     }
   }
   if (correctAnswer) {
+    score++;
     break;
   }
   guessesLeft--;
 } alert('My favorite colors are black, red, yellow, and blue!');
 
+
 let myNumber = 17;
 
-let guessNumber = prompt('Guess my favorite number');
+let guessNumber = prompt('Guess my favorite number between 1 and 30.');
 while (guessNumber !== myNumber) {
   guessNumber = prompt('Guess my favorite number');
   if (guessNumber > myNumber) {
