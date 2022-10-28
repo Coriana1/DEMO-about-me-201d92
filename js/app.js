@@ -1,106 +1,120 @@
 'use strict';
-console.log('Hello World');
+// console.log('Hello World');
+
+let score = 0;
 
 let guessName = prompt('What is your name?');
 // console.log(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
 alert(`Welcome to my page ${guessName}! Please answer yes or no to a few quick questions.`);
 
-function questionOne() {
+function vacation() {
   let questionOne = prompt('Have you ever been to Disney World?').toUpperCase();
   if(questionOne === 'YES' || questionOne === 'Y') {
-  // console.log(`YES! ${guessName}! Correct me too!`);
-    alert(`YES! ${guessName}! correct me too!`);
+  // console.log(`Correct ${guessName}! We should go back!`);
+    alert(`Correct ${guessName}! We should go back!`);
   } else if (questionOne === 'NO' || questionOne === 'N') {
-    //  console.log(`NO? ${guessName}! wrong answer but too bad me neither!`);
-    alert(`NO, ${guessName}! too bad me neither!`);
+    //  console.log(`Wrong ${guessName}, but do not feel bad I have not been neither!`);
+    alert(`Wrong answer ${guessName}, but do not feel bad I have not been neither!`);
   }
 } 
-questionOne();
+vacation();
 
-function questionTwo() {
+function moodToday() {
   let questionTwo = prompt('Did you have a good day?').toUpperCase();
   if(questionTwo === 'YES' || questionTwo === 'Y') {
-    // console.log(`Correct! ${guessName}! I am glad to hear that!`);
-    alert(`Correct! ${guessName}! I am glad to hear that!`);
+    // console.log(`Correct! ${guessName} I am glad to hear that!`);
+    alert(`Correct! ${guessName} I am glad to hear that!`);
   } else if (questionTwo === 'NO' || questionTwo === 'N') {
-  // console.log(`WRONG! But ${guessName}! I hope tommorrow is better!`);
-    alert(`WRONG! But ${guessName}! I hope tommorrow is better!`);
+  // console.log(`WRONG! But ${guessName} I hope tommorrow is better!`);
+    alert(`WRONG! But ${guessName} I hope tommorrow is better!`);
   }
 }
-questionTwo();
+moodToday();
 
-function questionThree() {
+function games() {
   let questionThree = prompt('Have you ever played Monopoly?').toUpperCase();
   if(questionThree === 'YES' || questionThree === 'Y') {
-  // console.log(`Right Answer! ${guessName}! I love that game.`);
-    alert(`Right Answer! ${guessName}! I love that game.`);
+  // console.log(`Right Answer ${guessName}! I love that game.`);
+    alert(`Right Answer ${guessName}! I love that game.`);
   } else if (questionThree === 'NO' || questionThree === 'N') {
-  // console.log(`${guessName}! Wrong Answer! You are missing out on some fun!`);
-    alert(`${guessName}! Wrong Answer! You are missing out on some fun!`);
+  // console.log(`Wrong Answer! You are missing out on some fun ${guessName}!`);
+    alert(`Wrong Answer! You are missing out on some fun ${guessName}!`);
   }
 }
-questionThree();
+games();
 
-function questionFour() {
+function adventureSeeker() {
   let questionFour = prompt('Would you ever go sky diving?').toUpperCase();
   if(questionFour === 'YES' || questionFour === 'Y') {
-  // console.log(`True! ${guessName}! I hope to go someday as well.`);
-    alert(`True! ${guessName}! I hope to go someday as well.`);
+  // console.log(`True! ${guessName}! I hope to go someday.`);
+    alert(`True! ${guessName}! I hope to go someday.`);
   } else if (questionFour === 'NO' || questionFour === 'N') {
-  // console.log(`Incorrect! ${guessName}! I wish you would at leasr try.`);
-    alert(`Incorrect! ${guessName}! wish you would at leasr try.`);
+  // console.log(`Incorrect ${guessName}! I wish you would at least try.`);
+    alert(`Incorrect ${guessName}! I wish you would at least try.`);
   }
 }
-questionFour();
+adventureSeeker();
 
-function questionFive() {
+function socialSites() {
   let questionFive = prompt('Do you use social media?').toUpperCase();
   if(questionFive === 'YES' || questionFive === 'Y') {
-  // console.log(`${guessName}! Right Answer! I love all platforms.`);
-    alert(`${guessName}! Right Answer! I love all platforms.`);
+  // console.log(`${guessName}! Right Answer! We should follow eachother on one ${guessName}!`);
+    alert(`Right Answer! We should follow eachother on one ${guessName}! `);
   } else if (questionFive === 'NO' || questionFive === 'N') {
   // console.log(`${guessName}! Incorrect! Give it one last try please.`);
     alert(`${guessName}! Incorrect! Give it one last try please.`);
   }
 }
-questionFive();
+socialSites();
 
-function favColor() {
+function guessingGame() {
+  let myNumber = 17;
+  let guesses = 4;
+  while (guesses >0) {
+    let questionSix = +prompt('Guess my favorite number. It is between 1 and 25');
+    if (questionSix === myNumber) {
+      alert('Correct! You are good at this game!');
+      score++;
+      break;
+    } else if (questionSix > myNumber) {
+      alert(`That is toooo high! Try guessing again. ${guesses - 1} guesses left.`);
+    } else if(questionSix < myNumber) {
+      alert(`Too low, try again. ${guesses - 1} guesses left.`);
+    }
+    guesses--;
+  }
+  if(guesses === 0) {
+    alert(`Correct! Yayyy you got it! My favorite number is ${myNumber}!`);
+  }
+}
+guessingGame();
+
+
+function myFavorite() {
   let favColor = ['black', 'red', 'yellow', 'blue'];
   let guessesLeft = 6;
   let correctAnswer = false;
   while(guessesLeft > 0) {
-    let guess = prompt('What is my favorite color?').toLowerCase();
+    let questionSeven = prompt('What is my favorite color?').toLowerCase();
     for (let i = 0; i < favColor.length; i++) {
-      if (favColor[i] === guess) {
-        console.log('Correct! Back is my favoriteeeee!');
+      if (favColor[i] === questionSeven) {
+        console.log('Correct ${guessName} ! I love this color!');
         correctAnswer = true;
       }
-      else {
-        console.log(`${guess}!`);
-      }
     }
-    if (correctAnswer) {
+    if(correctAnswer) {
+      alert(`Corrrecttttt ${questionSeven}! I love this color!`);
+      score++;
       break;
+    } else {
+      alert(`${questionSeven} is not my favorite color. Try again, ${guessesLeft - 1} guesses left.`);
     }
     guessesLeft--;
-  } alert('My favorite colors are black, red, yellow, and blue!');
-}
-favColor();
-
-function myNumber() {
-  let myNumber = 17;
-
-  let guessNumber = prompt('Guess my favorite number');
-  while (guessNumber !== myNumber) {
-    guessNumber = prompt('Guess my favorite number');
-    if (guessNumber > myNumber) {
-      alert('Wrong! You guessed too high!');
-    }
-    if (guessNumber < myNumber) {
-      alert('Guess again, that was too low!');
-    }
   }
+  alert(`My favorite colors are ${favColor[0]}, ${favColor[1]}, ${favColor[2]}, ${favColor[3]}.`);
 }
-myNumber();
+myFavorite();
+
+alert(`Your final score is ${score} out of 7.`);
+
 alert(`Thanks for participating, ${guessName}. Thank you for visiting my site!`);
